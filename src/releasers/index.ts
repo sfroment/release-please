@@ -34,6 +34,7 @@ import {Helm} from './helm';
 import {Elixir} from './elixir';
 import {JavaBackport} from './java-backport';
 import {Dart} from './dart';
+import {PrestaShop} from './prestashop';
 
 // add any new releasers you create to this type as well as the `releasers`
 // object below.
@@ -49,6 +50,7 @@ export type ReleaseType =
   | 'ocaml'
   | 'php'
   | 'php-yoshi'
+  | 'prestashop'
   | 'python'
   | 'ruby'
   | 'ruby-yoshi'
@@ -73,6 +75,7 @@ const releasers: Releasers = {
   ocaml: OCaml,
   php: PHP,
   'php-yoshi': PHPYoshi,
+  prestashop: PrestaShop,
   python: Python,
   ruby: Ruby,
   'ruby-yoshi': RubyYoshi,

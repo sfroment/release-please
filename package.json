@@ -1,5 +1,5 @@
 {
-  "name": "release-please",
+  "name": "sfroment-release-please",
   "version": "12.6.0",
   "description": "generate release PRs based on the conventionalcommits.org spec",
   "main": "./build/src/index.js",
@@ -20,7 +20,7 @@
     "templates",
     "!build/src/**/*.map"
   ],
-  "repository": "googleapis/release-please",
+  "repository": "sfroment42/release-please",
   "keywords": [
     "release",
     "conventional-commits"
