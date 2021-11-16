@@ -45,7 +45,7 @@ export class PrestaShopConfig implements Update {
       return content;
     }
 
-    const re = new RegExp('(<version><![CDATA[)(.*?)(]]></version>)', 'gm');
+    const re = /(<version><!\[CDATA\[)(.*?)(\]\]><\/version>)/gm;
     return content.replace(re, '$1' + this.version + '$3');
   }
 }
