@@ -20,6 +20,7 @@ import {Changelog} from '../updaters/changelog';
 // PHP Specific.
 import {RootComposerUpdatePackage} from '../updaters/root-composer-update-package';
 import {PrestaShopModule} from '../updaters/prestashop-module-version';
+import {PrestaShopConfig} from '../updaters/prestashop-config-version';
 import {ReleasePRConstructorOptions} from '..';
 
 const CHANGELOG_SECTIONS = [
@@ -66,6 +67,16 @@ export class PrestaShop extends ReleasePR {
     updates.push(
       new PrestaShopModule({
         path: `${packageName.name}.php`,
+        changelogEntry,
+        version: candidate.version,
+        versions: versions,
+        packageName: packageName.name,
+      })
+    );
+
+    updates.push(
+      new PrestaShopConfig({
+        path: 'config.xml',
         changelogEntry,
         version: candidate.version,
         versions: versions,
